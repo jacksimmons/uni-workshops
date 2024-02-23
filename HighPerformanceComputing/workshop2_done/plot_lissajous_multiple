@@ -1,0 +1,25 @@
+# Gnuplot script for plotting multiple Lissajous curves
+# Used in ECM3446/ECMM461 Workshop 2
+
+
+
+# Save the plot in a PNG file
+set terminal png
+
+# Specify the name of the file here
+set output "lissajous_multi.png"
+
+# Switch off the key
+set key off
+
+# Set up a 2x2 plot
+set multiplot layout 2, 2
+
+# Plot the data
+plot "output_0.dat" with lines
+plot "output_1.dat" with lines
+plot "output_2.dat" with lines
+plot "output_3.dat" with lines
+
+# Make sure multi plot is closed before exiting
+unset multiplot

@@ -1,0 +1,23 @@
+# Gnuplot script for plotting advection equation results
+# Used in ECM3446/ECMM461 Workshop 3
+
+
+
+# Save the plot in a PNG file
+set terminal png
+
+# Specify the name of the file here
+set output "advection.png"
+
+# Label the x-axis
+set xlabel "x"
+
+# Label the y-axis
+set ylabel "u"
+
+# Switch off the key
+set key off
+
+# Plot the data
+plot "initial.dat" with line, "final.dat" with line
+

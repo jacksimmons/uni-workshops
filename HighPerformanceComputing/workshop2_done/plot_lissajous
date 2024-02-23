@@ -1,0 +1,16 @@
+# Gnuplot script for plotting a single Lissajous curve
+# Used in ECM3446/ECMM461 Workshop 2
+
+
+
+# Save the plot in a PNG file
+set terminal png
+
+# Specify the name of the file here
+set output "lissajous.png"
+
+# Switch off the key
+set key off
+
+# Plot the data
+plot "output.dat" with lines

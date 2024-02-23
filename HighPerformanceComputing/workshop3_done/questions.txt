@@ -1,0 +1,23 @@
+1) End time: 45(s)
+Advection: 0.45(m)
+
+2) The end time increases 100x (45 to 4500s)
+This is because dt is proportional to the inverse of NX (number of grid pts)
+As dt is 100x larger as NX is 100x smaller, it follows that the end time
+will also be 100x larger than before (as the number of time steps doesn't
+change).
+
+3) The accuracy has decreased - on the green curve the amplitude has
+decreased noticably from what it should be.
+The curves are "truncated" at the top due to the decreased accuracy.
+
+4) The reduced resolution makes the program execute 100x fewer calculations.
+This is a large computational time save in the advection calculation part.
+
+5) It skews the scale of the graph. It seems it does this by adding anomaly
+points at very extreme u values, making the original points all but
+disappear.
+
+6) The values of u are all inf/-inf in final.dat.
+
+7) Use an if-statement to apply the correct stencil programmatically.
