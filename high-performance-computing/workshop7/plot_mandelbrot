@@ -1,0 +1,20 @@
+# Gnuplot script for plotting the Madelbrot set
+# Used in ECM3446/ECMM461 Workshop 7
+
+
+
+# Save the plot in a PNG file
+set terminal png
+
+# Specify the name of the file here
+set output "mandelbrot.png"
+
+# Switch off the key
+set key off
+
+# Set axis limits
+set xrange [-2.0:1.0]
+set yrange [-1.0:1.0]
+
+# Plot the data
+plot "mandelbrot.dat" with image

@@ -1,0 +1,30 @@
+1) End time: 45(s)
+Advection: 0.45(m)
+
+2) The end time increases 100x (45 to 4500s)
+This is because dt is proportional to the inverse of NX (number of grid pts)As dt is 100x larger as NX is 100x smaller, it follows that the end time
+will also be 100x larger than before (as the number of time steps doesn't
+change).
+
+3) The accuracy has decreased - on the green curve the amplitude has
+decreased noticably from what it should be.
+The curves are "truncated" at the top due to the decreased accuracy.
+
+A - Smaller amplitude; Larger width => Numerical diffusion has occurred, due to the truncation error.
+Resolution affects the quality of the solution more fundamentally than just
+making it more detailed.
+
+4) The reduced resolution makes the program execute 100x fewer calculations.This is a large computational time save in the advection calculation part.
+
+A - Computational cost is 10_000x less.
+Because outer loop is 100x less (nsteps: 5000 -> 50)
+But all inner loops iterate over NX, which also reduces 100x (NX: 10_000 -> 100).
+So 10_000x less.
+
+5) It skews the scale of the graph. It seems it does this by adding anomaly
+points at very extreme u values, making the original points all but
+disappear.
+
+6) The values of u are all inf/-inf in final.dat.
+
+7) Use an if-statement to apply the correct stencil programmatically.

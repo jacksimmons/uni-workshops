@@ -1,5 +1,5 @@
 /*****************************************************************************
-Purpose: Program to generate Lissajous curves for ECM3446/ECMM461 workshop 2
+Purpose: Program to generate Lissajous curves with MPI parallelisation.
 
 Notes: Notation follows https://mathworld.wolfram.com/LissajousCurve.html
 

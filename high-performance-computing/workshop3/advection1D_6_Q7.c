@@ -1,5 +1,5 @@
 /*******************************************************************************
-6: Question 6
+6: Question 7
 
 1D advection example program which advects a Gaussian u(x) at a fixed velocity
 
@@ -98,10 +98,12 @@ int main(){
     u[0]    = bval_left;
     u[NX+1] = bval_right;
 
-    /* Calculate rate of change of u using leftward difference
+    /* Calculate rate of change of u using leftwards/rightwards difference
        Loop over points in the domain but not boundary values */
     for (int i=1; i<NX+1; i++){
-      dudt[i] = -velx * (u[i+1] - u[i]) / dx;
+      // !Q7 changes
+      float stencil = velx > 0.0f ? u[i] - u[i-1] : u[i+1] - u[i];
+      dudt[i] = -velx * stencil / dx;
     }
 
     /* Update u from time t to t+dt

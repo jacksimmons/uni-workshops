@@ -1,0 +1,15 @@
+# Gnuplot script for plotting a sinc function
+# Used in ECM3446/ECMM461 Workshop 5
+
+
+# Save the plot in a PNG file
+set terminal png
+
+# Specify the name of the file here
+set output "sinc.png"
+
+# Switch off the key
+set key off
+
+# Plot the data
+plot "sinc.dat" with lines

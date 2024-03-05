@@ -1,0 +1,31 @@
+ Note: This folder doesn't contain mandelbrot.dat because it was too large (100MB).
+
+1) T_0 = 1m 54s = 114s (Rounded down to nearest second)
+
+2)
+For 2 threads:  S_2  = T_0/T_2  = 114/80 = 1.425 (3dp)
+For 4 threads:  S_4  = T_0/T_4  = 114/68 = 1.676
+For 8 threads:  S_8  = T_0/T_8  = 114/35 = 3.257
+For 12 threads: S_12 = T_0/T_12 = 114/27 = 4.222
+For 16 threads: S_16 = T_0/T_16 = 114/20 = 5.700
+
+Efficiency:
+E_2 = S_2/2 = 0.713
+E_4 = S_4/4 = 0.419
+E_8 = S_8/8 = 0.407
+E_12 = S_12/12 = 0.352
+E_16 = S_16/16 = 0.356
+
+The program is not making efficient use of threads; efficiency gets
+worse as you increase the number of threads.
+
+3)
+Static had little to no impact on the performance.
+Dynamic significantly improved performance, over 2x as fast.
+Guided also significantly improved performance, slightly less so than dynamic.
+
+Dynamic performed the best because 
+
+4)
+The default loop schedule appears to be static, as the time taken to execute
+remained the same when adding that clause.

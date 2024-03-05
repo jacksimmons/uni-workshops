@@ -1,0 +1,22 @@
+! 1. 8 digits of accuracy.
+
+! 2. 16 digits of accuracy.
+It is consistent - the standard provides 15-17
+significant decimal digits.
+
+? 3. 4 terms are needed for the current precision
+level
+! It is 3 terms, because the 4th is too small to contribute
+
+! 4. The number of terms required in the approximation,
+increases with |x|.
+
+? 5. NaN is generated at x = 0, where sin(x) = 0.
+This results in 0 / 0 => NaN.
+Check if x = 0 and skip the iteration if so.
+The point is undefined, so no point in adding it
+to the plot.
+
+! Could do the above. Better:
+! sinx / x ~= x / x = 1 as x -> 0
+! If x = 0, sinc = 1

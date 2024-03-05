@@ -1,0 +1,25 @@
+Starting calculation on 2 threads 
+
+real	1m0.718s
+user	1m58.519s
+sys	0m0.080s
+Starting calculation on 4 threads 
+
+real	0m30.222s
+user	2m0.792s
+sys	0m0.084s
+Starting calculation on 8 threads 
+
+real	0m16.474s
+user	2m11.654s
+sys	0m0.100s
+Starting calculation on 12 threads 
+
+real	0m11.708s
+user	2m20.310s
+sys	0m0.132s
+Starting calculation on 16 threads 
+
+real	0m9.023s
+user	2m24.100s
+sys	0m0.108s

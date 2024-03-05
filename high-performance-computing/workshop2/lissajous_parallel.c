@@ -5,6 +5,7 @@ Q1: There are no dependencies that *prevent* it being parallelised, but there
 are constant dependencies. The parameter t uses incorrect scope which may cause
 a parallelised version to not work as expected.
 Q2: No it cannot, as file writing is done serially (line by line).
+The fprintf statements must be performed in order.
 Q3: I changed the scope of t.
 t was a shared variable, when it should have been private, so I moved it inside
 the for loop to make it so.
