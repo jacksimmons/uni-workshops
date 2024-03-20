@@ -1,0 +1,17 @@
+Question 1:
+Matmul takes 99.1829s.
+
+Question 2:
+DGEMM takes 2.15696s.
+It is over 45x faster than matmul.
+
+Question 3:
+Peak performance is: 1 * 16 * 2.6 GHz * 16 = 665.6 GFlops/s
+DGEMM achieves: 509.32 GFlops in 2.01052s  = 253.3 GFlops/s (1dp)
+Fraction (Actual / Peak): 0.38
+
+Question 4:
+Prediction: Performance will decrease with size of matrix, due to the algorithmic
+intensity of matrix multiplications.
+Reducing the size of a matrix reduces the number of FLOPs per memory access, tilting
+the overhead closer towards memory access.

@@ -1,0 +1,5 @@
+Threads: 16
+Matrix size: N= 8000
+Time for matmul: 99.1829
+Flops: 10.3244 GFlops
+C[100]: 3.2316e+09

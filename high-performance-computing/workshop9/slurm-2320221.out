@@ -1,0 +1,31 @@
+Threads: 8
+Running with size 4000
+Matrix size: N= 4000
+Time for DGEMM: 0.435999
+Flops: 293.579 GFlops
+C[100]: 8.07798e+08
+
+Running with size 6000
+Matrix size: N= 6000
+Time for DGEMM: 1.32875
+Flops: 325.118 GFlops
+C[100]: 1.8177e+09
+
+Running with size 8000
+Matrix size: N= 8000
+Time for DGEMM: 3.10773
+Flops: 329.501 GFlops
+C[100]: 3.2316e+09
+
+Running with size 10000
+Matrix size: N= 10000
+Time for DGEMM: 6.10715
+Flops: 327.485 GFlops
+C[100]: 5.0495e+09
+
+Running with size 12000
+Matrix size: N= 12000
+Time for DGEMM: 10.4478
+Flops: 330.789 GFlops
+C[100]: 7.27139e+09
+

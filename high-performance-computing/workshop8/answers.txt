@@ -1,0 +1,28 @@
+Question 1:
+Version 2 performs the best up to 16 processors.
+Version 2 distributes the workload by incrementing the iteration variable i
+by nProcs for each process, starting at the process's rank.
+
+
+Question 2:
+Version 1 performs the worst, it distributes the workload by splitting the
+for loop into contiguous chunks, thread n handles the nth chunk.
+
+
+Question 3:
+Version 3 is the slowest with 2 processors due to an increased number of
+MPI function calls - overhead. 
+
+
+Question 4:
+Version 2 performs the best on 2 nodes (32 processors).
+
+
+Question 5:
+MPI:
+Version 2 on 2 nodes gave a speed up of 17.9731.
+OpenMP:
+16 threads gave a speed up of 5.700.
+
+The speedup of MPI's version is over 3x that of OpenMP's. Therefore the
+fastest MPI version is significantly faster than that of OpenMP.

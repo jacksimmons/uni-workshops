@@ -1,0 +1,5 @@
+Threads: 16
+Matrix size: N= 8000
+Time for DGEMM: 2.15696
+Flops: 474.742 GFlops
+C[100]: 3.2316e+09
