@@ -1,4 +1,4 @@
- Note: This folder doesn't contain mandelbrot.dat because it was too large (100MB).
+Note: This folder doesn't contain mandelbrot.dat because it was too large (100MB).
 
 1) T_0 = 1m 54s = 114s (Rounded down to nearest second)
 
@@ -19,6 +19,8 @@ E_16 = S_16/16 = 0.356
 The program is not making efficient use of threads; efficiency gets
 worse as you increase the number of threads.
 
+Answer note: Big disparity between measured and ideal speedup (equivalent answer).
+
 3)
 Static had little to no impact on the performance.
 Dynamic significantly improved performance, over 2x as fast.
@@ -28,6 +30,10 @@ Dynamic performed the best because each thread had different amounts of work
 to perform (due to the loop: while (k < maxIter) { ... }).
 Using dynamic (or guided) scheduling methods led to threads taking up more work
 after finishing, leading to a workload better balanced between threads.
+
+Answer: is correct but bonus points:
+The dynamic loop schedule performs best because it performs load balancing at runtime
+with the most flexibility.
 
 4)
 The default loop schedule appears to be static, as the time taken to execute

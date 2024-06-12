@@ -1,0 +1,18 @@
+Question 1:
+20000 time steps
+(Tick)
+
+Question 2:
+80000 time steps
+A: Time step proportional to Grid spacing squared.
+
+Question 3:
+No
+(Tick)
+
+Question 4:
+Only 2000 steps required, and the gnuplot graph looks slightly different.
+Now 20 steps, no difference on the graph to above really.
+
+A: Some loss of accuracy but much fewer steps required.
+Implicit is unconditionally stable.

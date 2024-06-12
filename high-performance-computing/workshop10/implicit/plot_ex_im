@@ -1,0 +1,10 @@
+# Gnuplot script for plotting results from the 1D diffusion program
+
+
+set terminal png enhanced
+set output "ex_vs_im.png"
+
+set xlabel "x"
+set ylabel "u"
+
+plot "final.dat" w l title "Implicit", "../explicit/final.dat" w l title "Explicit"

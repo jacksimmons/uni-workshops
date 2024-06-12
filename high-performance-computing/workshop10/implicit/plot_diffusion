@@ -1,0 +1,10 @@
+# Gnuplot script for plotting results from the 1D diffusion program
+
+
+set terminal png enhanced
+set output "diffusion.png"
+
+set xlabel "x"
+set ylabel "u"
+
+plot "initial.dat" w l, "final.dat" w l

@@ -1,7 +1,7 @@
 Question 1:
 Version 2 performs the best up to 16 processors.
 Version 2 distributes the workload by incrementing the iteration variable i
-by nProcs for each process, starting at the process's rank.
+by nProcs for each process, starting at the process's rank. (Interleaved)
 
 
 Question 2:
@@ -11,7 +11,11 @@ for loop into contiguous chunks, thread n handles the nth chunk.
 
 Question 3:
 Version 3 is the slowest with 2 processors due to an increased number of
-MPI function calls - overhead. 
+MPI function calls - overhead.
+
+Answer: More specifically, v3 is a manager-worker program. Since there is one
+manager and one worker, only one processor calculates values, and it is no
+faster than the serial version.
 
 
 Question 4:
@@ -26,3 +30,6 @@ OpenMP:
 
 The speedup of MPI's version is over 3x that of OpenMP's. Therefore the
 fastest MPI version is significantly faster than that of OpenMP.
+
+Answer: More specifically, OpenMP is faster on one node, but at maximum performance
+(2 nodes), MPI can run faster.

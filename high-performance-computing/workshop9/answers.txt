@@ -15,3 +15,5 @@ Prediction: Performance will decrease with size of matrix, due to the algorithmi
 intensity of matrix multiplications.
 Reducing the size of a matrix reduces the number of FLOPs per memory access, tilting
 the overhead closer towards memory access.
+
+Algorithmic intensity increases with matrix size.
